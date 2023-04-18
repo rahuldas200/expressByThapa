@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.warpper{
+    background: url(../img/8552481.webp);
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.board{
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    /* background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%); */
+    border: 2px solid black;
+    border-radius: 5px;
+
+    width: 90vmin;
+    height: 92vmin;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background: rgb(221,6,6);
+    background: linear-gradient(90deg, rgba(221,6,6,1) 59%, rgba(243,165,165,1) 100%, rgba(255,255,255,1) 100%);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.food{
+    background-color: rgb(0, 128, 17);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.snake{
+    background-color: rgb(45, 28, 112);
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 5px;
+
+}
+.scoreBox{
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    border-radius: 8px;
+    font-weight: 600;
+   
+    position: absolute;
+    font-size: 2rem;
+    padding: 25px;
+    color: rgb(30, 22, 22);
+    top: 4%;
+    left: 75%;
+}
+.scoreBox p:first-of-type{
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+}
+.scoreBox p:last-of-type{
+    padding-top: 5px;
+    letter-spacing: 3px;
+
+}
+.Game{
+    font-family: 'Rubik Pixels', cursive;
+    color: red;
+    position: absolute;
+    font-size: 2.5rem;
+    top: 3%;
+    left: 3%;
+}
+.Over{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    font-family: 'Rubik Pixels', cursive;
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+.active{
+    display: flex;
+}
