@@ -6,15 +6,14 @@ const port = 8000;
 
 
 // console.log(path.join(__dirname,"../public"));
-const staticPath = path.join(__dirname,"../public");
+// const staticPath = path.join(__dirname,"../public");
 //building middeleware
-app.use(express.static(staticPath));
-
+// app.use(express.static(staticPath));
 
 //to set the view engine
 app.set("view engine" , "hbs");
 app.get('/', (req , res) =>{
-    // res.render("index");
+    res.render("index");
 });
 
 
@@ -30,4 +29,4 @@ app.get('/about',(req,res) =>{
 app.listen('8000',() =>{
     console.log(` hyy i'm listening  at :${port}`);
     
-});
+})
